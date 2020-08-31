@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { compareFunction } from '../utils/compareFunction';
 import { statusProperty } from '../utils/statusProperty';
-import './index.css'
 
 export default function CompareForm({ activeList }) {
 	const [ compareData, setCompareData ] = useState(null);
