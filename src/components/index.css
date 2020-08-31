@@ -1,0 +1,12 @@
+.card-disable {
+    background-color: white;
+}
+.card-active {
+    background-color: burlywood;
+}
+.text-active {
+    background-color: darkgreen;
+}
+.text {
+    color: black;
+}
