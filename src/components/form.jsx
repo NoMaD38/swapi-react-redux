@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function StarshipForm({selectData,setValueSelect}) {
     return (
-        <div className="form-group col-md-2">
+        <div className="form-group col-md-3">
             <h5>Список звездолётов</h5>
             <select className="form-control form-control-sm" onChange={e=>setValueSelect(e.target.value)}>
                 <option key={0}></option>

@@ -50,9 +50,9 @@ export default function Starhips() {
     },[dispatch])
 
     return (
-        <div>
+        <div className='container'>
             <StarshipForm selectData={selectData} setValueSelect={setValueSelect}/>
-            <CompareForm activeList={activeList} renderItems={renderItems}/>
+            <CompareForm activeList={activeList} controllerList={controllerList}/>
             <RenderStarships renderItems={renderItems} deleteItem={deleteItem} controllerList={controllerList} activeList={activeList}/>
         </div>
     )
