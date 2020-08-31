@@ -41,6 +41,7 @@ export default function Starhips() {
             })
         }
         
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[ starships, valueSelect])
 
     useEffect(()=>{
