@@ -6,24 +6,23 @@ import RenderStarships from '../../components/renderStarships'
 import CompareForm from '../../components/compareForm'
 export default function Starhips() {
 
-    //вся информация о самолётах
+    //вся информация о звездолётах
     const starships = useSelector(state=>state.starships)
     //информация для селектора
     const selectData = useSelector(state => state.selectStarships)
-    //сравниваемые самолёты
+    //отрисованные звездолёты
     const renderItems = useSelector(state => state.renderItems)
-
+    //сравниваемые звездолёты
     const activeList = useSelector(state => state.activeList)
 
     const [valueSelect,setValueSelect] = useState(null)
-    //список выбранных самолётов
     const dispatch = useDispatch()
-    //удалить элемент
+    //удалить отрисованный звездолёт
     const deleteItem = (item) => {
         dispatch(deleteFilterItems(item))
         dispatch(deleteRenderItems(item))
     }
-
+    //добавление/удаление сравниваемого звездолёта
     const controllerList = (item) => {
         const status = activeList.find(i=> i.name === item.name)
         if(status === undefined) {
@@ -42,7 +41,6 @@ export default function Starhips() {
             })
         }
         
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[ starships, valueSelect])
 
     useEffect(()=>{
